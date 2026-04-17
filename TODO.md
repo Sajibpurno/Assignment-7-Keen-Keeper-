@@ -1,7 +1,8 @@
-# Task Progress: Load friends.json data into ProfilesHome.jsx
+# Task: Fix src/app/error.jsx to proper Next.js error boundary
 
 ## TODO Steps:
-- [ ] Step 1: Create TODO.md with plan breakdown ✅
-- [x] Step 2: Update ProfilesHome.jsx to fix fetch URL and render friends as styled cards
-- [x] Step 3: Test the component and mark complete
+- [x] Step 1: Get user approval on fix plan
+- [x] Step 2: Edit src/app/error.jsx with proper class component and styling
+- [ ] Step 3: Test with dev server
+- [ ] Step 4: Mark complete and attempt_completion
 

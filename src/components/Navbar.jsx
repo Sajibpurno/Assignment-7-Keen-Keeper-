@@ -1,6 +1,9 @@
 'use client'
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { FaHome } from "react-icons/fa";
+import { RiTimeLine } from "react-icons/ri";
+import { FaChartLine } from "react-icons/fa6";
 
 const Navbar = () => {
   const pathName = usePathname()
@@ -15,7 +18,7 @@ const Navbar = () => {
         } font-medium px-4 py-2 rounded-lg transition-colors`} 
         href="/"
       >
-        Home
+      <FaHome/>Home
       </Link>
     </li>
     <li>
@@ -27,7 +30,7 @@ const Navbar = () => {
         } font-medium px-4 py-2 rounded-lg transition-colors`} 
         href="/timeline"
       >
-        Timeline
+        <RiTimeLine/>Timeline
       </Link>
     </li>
     <li>
@@ -39,7 +42,7 @@ const Navbar = () => {
         } font-medium px-4 py-2 rounded-lg transition-colors`} 
         href="/stats"
       >
-        Stats
+        <FaChartLine/>Stats
       </Link>
     </li>
   </>
