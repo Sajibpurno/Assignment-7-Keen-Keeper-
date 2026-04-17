@@ -89,7 +89,7 @@ const ProfileDetails = async ({ params }) => {
 
                         {/* Quick Check-In সেকশন */}
 
-                        <Btn/>     
+                        <Btn friend={friend} />     
 
                     </div>
                 </div>
