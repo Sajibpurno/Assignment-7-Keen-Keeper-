@@ -1,11 +1,16 @@
-import React from 'react';
+'use client';
+import React, { useEffect, useState } from 'react';
 import Allcard from './card/Allcard';
 
-const ProfilesHome = async () => {
-  const res = await fetch('http://localhost:3000/friends.json', { cache: 'force-cache' });
-  const friends = await res.json();
+const ProfilesHome = () => {
+  const [friends, setFriends] = useState([]);
 
-  //status calculation
+  useEffect(() => {
+    fetch('/friends.json')
+      .then(res => res.json())
+      .then(data => setFriends(data));
+  }, []);
+
   const totalFriends = friends.length;
   const onTrackCount = friends.filter(f => f.status === 'on-track').length;
   const overdueCount = friends.filter(f => f.status === 'overdue').length;

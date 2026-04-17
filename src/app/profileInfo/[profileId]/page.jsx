@@ -1,16 +1,26 @@
+'use client';
 import Btn from '@/components/ButtonArea/Btn';
 import Link from 'next/link';
-import React from 'react';
+import { useEffect, useState } from 'react';
+import { useParams } from 'next/navigation';
 
-const ProfileDetails = async ({ params }) => {
-    const { profileId } = await params;
-    const res = await fetch('http://localhost:3000/friends.json', { cache: 'force-cache' });
-    const friends = await res.json();
-    const friend = friends.find((f) => f.id === parseInt(profileId));
+const ProfileDetails = () => {
+    const { profileId } = useParams();
+    const [friend, setFriend] = useState(null);
+    const [notFound, setNotFound] = useState(false);
 
-    if (!friend) {
-        return <div className="p-10 text-center text-red-500 font-bold font-sans">Friend not found!</div>;
-    }
+    useEffect(() => {
+        fetch('/friends.json')
+            .then(res => res.json())
+            .then(friends => {
+                const found = friends.find(f => f.id === parseInt(profileId));
+                if (!found) setNotFound(true);
+                else setFriend(found);
+            });
+    }, [profileId]); 
+
+    if (notFound) return <div className="p-10 text-center text-red-500 font-bold font-sans">Friend not found!</div>;
+    if (!friend) return <div className="p-10 text-center">Loading...</div>;
 
     return (
         <div className="bg-[#f8f9fa] min-h-screen py-12 px-4 font-sans">
