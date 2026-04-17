@@ -1,36 +1,22 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+🚀 KeenKeeper
+A sleek and modern personal relationship management tool designed to help users track and nurture their most meaningful connections. KeenKeeper provides a centralized platform to log interactions, set reminders, and visualize relationship health through analytics.
 
-## Getting Started
+🛠️ Technologies Used
+Framework: Next.js (App Router)
 
-First, run the development server:
+Styling: Tailwind CSS & DaisyUI
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+State Management: React Context API
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Data Visualization: Recharts
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Icons: React Icons
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Deployment: Vercel
 
-## Learn More
+✨ Key Features
+1. Interactive Interaction Logging: Easily log and track different types of interactions such as Calls, Texts, and Video Chats with specific friends to maintain a clear history of your social life.
 
-To learn more about Next.js, take a look at the following resources:
+2. Dynamic Timeline Filtering: A powerful filtering system that allows users to sort their interaction history by type, ensuring they can quickly find specific past conversations or touchpoints.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+3. Data-Driven Friendship Analytics: Beautifully designed Donut Charts (powered by Recharts) that provide a visual breakdown of your communication habits, helping you see which interaction methods you use most.
