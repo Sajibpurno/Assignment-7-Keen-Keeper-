@@ -8,7 +8,6 @@ const Navbar = () => {
   const links = <>
     <li>
       <Link 
-        // focus, active এবং hover সব স্টেটে কালার ফিক্স করা হয়েছে
         className={`${
           pathName === '/' 
           ? '!bg-[#1e4d40] !text-white focus:!bg-[#1e4d40] focus:!text-white active:!bg-[#1e4d40] active:!text-white' 
@@ -46,7 +45,7 @@ const Navbar = () => {
   </>
 
   return (
-    <nav className="shadow-sm bg-white border-b border-gray-100">
+    <nav className="shadow-sm bg-white border-b border-gray-100 sticky top-0 z-50 w-full">
       <div className="navbar px-4 md:px-8 container mx-auto">
         <div className="navbar-start">
           <div className="dropdown">

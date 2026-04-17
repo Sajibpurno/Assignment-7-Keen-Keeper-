@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import { ToastContainer } from "react-toastify";
 import InteractionContext from "@/context/InteractionContext";
 import Provider from "./lib/provider";
+import Footer from "@/components/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -26,14 +27,14 @@ export default function RootLayout({ children }) {
     <html lang="en" 
     data-theme="light">
       <body className="bg-base-100 text-base-content min-h-screen flex flex-col">
-        <main className="flex-grow">
+        <main className="grow">
  
         <Provider>
           <Navbar />
            {children}
         </Provider>
-        
         </main>
+        <Footer />
         <ToastContainer position="top-center" autoClose={3000} />
       </body>
     </html>
